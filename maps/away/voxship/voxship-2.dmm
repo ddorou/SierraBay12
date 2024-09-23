@@ -237,6 +237,7 @@
 /obj/item/gun/energy/sonic,
 /obj/item/gun/launcher/alien/spikethrower,
 /obj/item/gun/launcher/alien/slugsling,
+/obj/item/gun/launcher/alien/spikethrower,
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/fore)
 "aK" = (
@@ -652,6 +653,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/item/storage/bolt_bag/full_of_bolts,
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/fore)
 "bJ" = (
@@ -776,6 +778,11 @@
 /obj/item/clothing/suit/armor/vox_scrap,
 /obj/item/clothing/suit/armor/vox_scrap,
 /obj/item/clothing/suit/armor/vox_scrap,
+/obj/item/clothing/head/helmet/vox_scrap,
+/obj/item/clothing/head/helmet/vox_scrap,
+/obj/item/clothing/head/helmet/vox_scrap,
+/obj/item/clothing/head/helmet/vox_scrap,
+/obj/item/clothing/head/helmet/vox_scrap,
 /obj/item/clothing/under/vox/vox_casual,
 /obj/item/clothing/under/vox/vox_casual,
 /obj/item/clothing/under/vox/vox_casual,

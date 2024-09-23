@@ -1,5 +1,7 @@
 /mob/var/list/default_emotes = list()
 /mob/var/list/usable_emotes = list()
+/mob/var/next_audible_emote_time = 0
+/mob/var/audible_emote_cooldown = 0.5 SECONDS
 
 /mob/proc/update_emotes(skip_sort)
 	usable_emotes.Cut()
@@ -162,6 +164,9 @@
 	/singleton/emote/visible/tfist,
 	/singleton/emote/visible/tilt,
 	/singleton/emote/visible/atten,
+	/singleton/emote/audible/whistle,
+	/singleton/emote/visible/scratch,
+	/singleton/emote/audible/finger_snap,
 )
 
 /mob/living/carbon/human/monkey/default_emotes = list(

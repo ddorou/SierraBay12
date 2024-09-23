@@ -127,11 +127,11 @@
 	. = ..()
 	if (target == buckled_mob)
 		set_density(TRUE)
-		mouse_opacity = XMOUSE_OPACITY_ALWAYS
+		mouse_opacity = MOUSE_OPACITY_PRIORITY
 		update_icon()
 	else
 		set_density(FALSE)
-		mouse_opacity = XMOUSE_OPACITY_DEFAULT
+		mouse_opacity = MOUSE_OPACITY_NORMAL
 		if (drip_active)
 			RipDrip()
 		update_icon()
@@ -274,6 +274,7 @@
 	if (istype(human))
 		human.custom_pain(power = 20)
 	buckled_mob.apply_damage(rand(1, 3), DAMAGE_BRUTE, pick(BP_R_ARM, BP_L_ARM), damage_flags = DAMAGE_FLAG_SHARP, armor_pen = 100)
+	drip_active = FALSE
 	update_icon()
 
 

@@ -1,7 +1,4 @@
-
-
-
-
+/*
 var/global/list/explosion_turfs = list()
 
 var/global/explosion_in_progress = 0
@@ -16,7 +13,12 @@ var/global/explosion_in_progress = 0
 
 	if(power <= 0) return
 	epicenter = get_turf(epicenter)
+//[SIERRA-ADD] - MODPACK_RND
 	if(!epicenter) return
+	for(var/obj/item/device/beacon/explosion_watcher/W in explosion_watcher_list)
+		if(get_dist(W, epicenter) < 10)
+			W.react_explosion(epicenter, power)
+//[/SIERRA-ADD] - MODPACK_RND
 
 	explosion_in_progress = 1
 	explosion_turfs = list()
@@ -143,3 +145,4 @@ var/global/explosion_in_progress = 0
 		return 0
 	else
 		return ..()
+*/
