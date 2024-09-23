@@ -14,9 +14,9 @@
 	spawn_positions = 2
 	selection_color = "#013d3b"
 	alt_titles = list(
+		"Surgical Resident" = /singleton/hierarchy/outfit/job/sierra/crew/medical/senior/surgicalresident,
 		"Xenosurgeon" = /singleton/hierarchy/outfit/job/sierra/crew/medical/senior/xenosurgeon,
 		"Trauma Surgeon" = /singleton/hierarchy/outfit/job/sierra/crew/medical/senior/traumasurgeon
-		"Surgical Resident" = /singleton/hierarchy/outfit/job/sierra/crew/medical/senior/surgicalresident
 	)
 	outfit_type = /singleton/hierarchy/outfit/job/sierra/crew/medical/senior
 	allowed_branches = list(
