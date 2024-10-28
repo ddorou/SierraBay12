@@ -90,7 +90,7 @@
 /datum/sprite_accessory/marking/modpack_body_markings/human/tonage_chest3
 	name = "Tonage 3 (Masculine)"
 	icon_state = "h_tonage_chest3"
-	do_coloration = DO_COLORATION_SKIN
+	do_coloration = DO_COLORATION_USER
 	body_parts = list(BP_CHEST)
 	disallows = list(
 		/datum/sprite_accessory/marking/modpack_body_markings/humanlike/tonage_chest,
@@ -111,7 +111,7 @@
 /datum/sprite_accessory/marking/modpack_body_markings/human/brows_head
 	name = "Brows"
 	icon_state = "brows_head"
-	draw_target = MARKING_TARGET_HEAD
+	do_coloration = DO_COLORATION_USER
 	body_parts = list(BP_HEAD)
 
 /datum/sprite_accessory/marking/modpack_body_markings/human/eyeshade

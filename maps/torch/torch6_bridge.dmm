@@ -1318,7 +1318,6 @@
 /obj/structure/noticeboard{
 	pixel_y = 30
 	},
-/obj/item/storage/pill_bottle/tacks,
 /obj/item/storage/toolbox/emergency,
 /obj/item/device/flashlight,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -1759,6 +1758,8 @@
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/random_multi/single_item/memo_command,
 /obj/random_multi/single_item/memo_supply,
+/obj/item/folder/envelope/dcorder,
+/obj/item/folder/envelope/csorder,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/office/xo)
 "de" = (
@@ -2138,7 +2139,6 @@
 /obj/structure/noticeboard{
 	pixel_x = 32
 	},
-/obj/item/storage/pill_bottle/tacks,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
 "dR" = (
@@ -3979,7 +3979,6 @@
 /obj/structure/noticeboard{
 	pixel_x = 32
 	},
-/obj/item/storage/pill_bottle/tacks,
 /obj/machinery/button/alternate/door/bolts{
 	desc = "A remote control-switch for the office door.";
 	id_tag = "liaisondoor2";
@@ -4198,6 +4197,7 @@
 	dir = 6
 	},
 /obj/random_multi/single_item/memo_engineering,
+/obj/item/folder/envelope/ceorder,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/office/ce)
 "iU" = (
@@ -4899,6 +4899,8 @@
 /obj/random_multi/single_item/memo_command,
 /obj/random_multi/single_item/memo_supply,
 /obj/random_multi/single_item/memo_medical,
+/obj/item/folder/envelope/ndaorder,
+/obj/item/paper/immediateorder,
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "lu" = (
@@ -5390,6 +5392,7 @@
 /area/hallway/primary/bridge/aft)
 "mT" = (
 /obj/structure/table/woodentable/walnut,
+/obj/item/folder/envelope/cmdorder,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/cobed)
 "mV" = (
@@ -5659,7 +5662,6 @@
 /obj/structure/noticeboard{
 	pixel_y = -30
 	},
-/obj/item/storage/pill_bottle/tacks,
 /obj/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/cmo)
@@ -7709,7 +7711,7 @@
 /obj/structure/noticeboard{
 	pixel_x = 32
 	},
-/obj/item/storage/pill_bottle/tacks,
+/obj/item/folder/envelope/cmdorder,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/office/sgr)
 "tC" = (
@@ -8082,7 +8084,6 @@
 /obj/structure/noticeboard{
 	pixel_x = 32
 	},
-/obj/item/storage/pill_bottle/tacks,
 /turf/simulated/floor/carpet/blue2,
 /area/crew_quarters/heads/office/sgr)
 "uB" = (
@@ -8417,7 +8418,6 @@
 /obj/structure/noticeboard{
 	pixel_x = 32
 	},
-/obj/item/storage/pill_bottle/tacks,
 /obj/item/reagent_containers/food/drinks/glass2/rocks,
 /obj/item/reagent_containers/food/drinks/glass2/rocks,
 /obj/item/reagent_containers/food/drinks/glass2/rocks,
@@ -8880,7 +8880,6 @@
 /obj/structure/noticeboard{
 	pixel_x = -32
 	},
-/obj/item/storage/pill_bottle/tacks,
 /obj/machinery/keycard_auth/torch{
 	pixel_y = -24
 	},
@@ -8929,6 +8928,7 @@
 	},
 /obj/item/stamp/cos,
 /obj/random_multi/single_item/memo_security,
+/obj/item/folder/envelope/cosorder,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/cos)
 "wD" = (
@@ -10584,7 +10584,6 @@
 /obj/structure/noticeboard{
 	pixel_x = 32
 	},
-/obj/item/storage/pill_bottle/tacks,
 /obj/machinery/newscaster{
 	pixel_y = -32
 	},
@@ -11167,7 +11166,6 @@
 /obj/structure/noticeboard{
 	pixel_y = 30
 	},
-/obj/item/storage/pill_bottle/tacks,
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/machinery/newscaster{
 	pixel_x = 32
@@ -11465,7 +11463,6 @@
 /obj/structure/noticeboard{
 	pixel_x = 32
 	},
-/obj/item/storage/pill_bottle/tacks,
 /obj/machinery/computer/modular/preset/aislot/sysadmin,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/storage)
@@ -12137,7 +12134,6 @@
 /obj/structure/noticeboard{
 	pixel_y = 30
 	},
-/obj/item/storage/pill_bottle/tacks,
 /obj/item/sticky_pad/random,
 /obj/machinery/button/alternate/door{
 	desc = "A remote control-switch for the office door.";
@@ -12332,6 +12328,7 @@
 /obj/floor_decal/corner/paleblue/diagonal,
 /obj/structure/table/glass,
 /obj/random_multi/single_item/memo_medical,
+/obj/item/folder/envelope/cmoorder,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/cmo)
 "Kh" = (
@@ -12386,7 +12383,6 @@
 /obj/structure/noticeboard{
 	pixel_y = 30
 	},
-/obj/item/storage/pill_bottle/tacks,
 /obj/item/aiModule/freeform,
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/cobed)
@@ -12638,6 +12634,7 @@
 /obj/floor_decal/corner/research{
 	dir = 5
 	},
+/obj/item/folder/envelope/exploorder,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/office/rd)
 "Lw" = (
@@ -13292,6 +13289,7 @@
 	pixel_y = -4
 	},
 /obj/item/hand_labeler,
+/obj/item/folder/envelope/clorder,
 /turf/simulated/floor/carpet/green,
 /area/crew_quarters/heads/office/cl/backroom)
 "Ox" = (
@@ -14361,7 +14359,6 @@
 /obj/structure/noticeboard{
 	pixel_x = -32
 	},
-/obj/item/storage/pill_bottle/tacks,
 /obj/floor_decal/corner/blue/three_quarters{
 	dir = 8
 	},
@@ -15704,7 +15701,6 @@
 /obj/structure/noticeboard{
 	pixel_y = 30
 	},
-/obj/item/storage/pill_bottle/tacks,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/cos)
 "Zx" = (

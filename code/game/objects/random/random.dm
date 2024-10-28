@@ -445,19 +445,22 @@
 	icon_state = "greenglow"
 
 /obj/random/trash/spawn_choices()
-	return list(/obj/item/remains/lizard,
-				/obj/decal/cleanable/blood/gibs/robot,
-				/obj/decal/cleanable/blood/oil,
-				/obj/decal/cleanable/blood/oil/streak,
-				/obj/decal/cleanable/spiderling_remains,
-				/obj/item/remains/mouse,
-				/obj/decal/cleanable/vomit,
-				/obj/decal/cleanable/blood/splatter,
-				/obj/decal/cleanable/ash,
-				/obj/decal/cleanable/generic,
-				/obj/decal/cleanable/flour,
-				/obj/decal/cleanable/dirt,
-				/obj/item/remains/robot)
+	return list(
+		/obj/item/remains/lizard,
+		/obj/decal/cleanable/blood/gibs/robot,
+		/obj/decal/cleanable/blood/oil,
+		/obj/decal/cleanable/blood/oil/streak,
+		/obj/decal/cleanable/spiderling_remains,
+		/obj/item/remains/mouse,
+		/obj/decal/cleanable/vomit,
+		/obj/decal/cleanable/blood/splatter,
+		/obj/decal/cleanable/ash,
+		/obj/decal/cleanable/generic,
+		/obj/decal/cleanable/flour,
+		/obj/decal/cleanable/dirt,
+		/obj/item/remains/robot,
+		/obj/item/material/shard/caltrop/tack
+	)
 
 
 /obj/random/closet //A couple of random closets to spice up maint
@@ -1078,7 +1081,10 @@ something, make sure it's not in one of the other lists.*/
 				/obj/item/storage/firstaid/surgery = 4,
 				/obj/item/cell/infinite = 1,
 				/obj/item/archaeological_find = 2,
-				/obj/machinery/artifact = 1,
+				//[SIERRA-EDIT] - ANOMALIES,
+				// /obj/machinery/artifact = 1,
+				/obj/machinery/artifact/no_anomalies = 1,
+				//[SIERRA-EDIT],
 				/obj/item/device/multitool/hacktool = 2,
 				/obj/item/surgicaldrill = 7,
 				/obj/item/FixOVein = 7,

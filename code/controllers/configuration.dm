@@ -54,7 +54,10 @@
 
 	/// log world.log to game log
 	var/static/log_world_output = FALSE
-
+//[SIERRA-ADD]
+	/// log signals messages
+	var/static/log_signals = FALSE
+//[/SIERRA-ADD]
 	/// Allows admins with relevant permissions to have their own ooc colour
 	var/static/allow_admin_ooccolor = FALSE
 
@@ -81,8 +84,8 @@
 	/// length of voting period (deciseconds, default 1 minute)
 	var/static/vote_period = 600
 
-	/// Time in minutes between checks for ending empty rounds
-	var/static/empty_round_check_interval = 0
+	/// Time in minutes after which a round with no living players ends
+	var/static/empty_round_timeout = 0
 
 	/// Time in minutes before the first autotransfer vote
 	var/static/vote_autotransfer_initial = 120
@@ -446,6 +449,11 @@
 
 	// [SIERRA-ADD]
 	var/static/shutdown_on_reboot = FALSE
+	var/static/use_spreading_explosions = TRUE //Defines whether the server uses iterative or circular explosions.
+
+	var/static/iterative_explosives_z_threshold = 8
+	var/static/iterative_explosives_z_multiplier = 0.5
+	var/static/iterative_explosives_z_subtraction = 2
 	// [/SIERRA-ADD]
 
 
@@ -534,6 +542,10 @@
 				log_adminwarn = TRUE
 			if ("log_world_output")
 				log_world_output = TRUE
+				//[SIERRA-ADD]
+			if ("log_signals")
+				log_signals = TRUE
+				//[/SIERRA-ADD]
 			if ("log_hrefs")
 				log_hrefs = TRUE
 			if ("log_runtime")
@@ -595,11 +607,11 @@
 				if (isnull(transfer_vote_block_antag_time) || transfer_vote_block_antag_time < 0)
 					log_misc("Invalid transfer_vote_block_antag_time: [value]")
 					transfer_vote_block_antag_time = 0
-			if ("empty_round_check_interval")
-				empty_round_check_interval = text2num_or_default(value)
-				if (isnull(empty_round_check_interval) || empty_round_check_interval < 0)
-					log_misc("Invalid empty_round_check_interval: [value]")
-					empty_round_check_interval = 0
+			if ("empty_round_timeout")
+				empty_round_timeout = text2num_or_default(value)
+				if (isnull(empty_round_timeout) || empty_round_timeout < 0)
+					log_misc("Invalid empty_round_timeout: [value]")
+					empty_round_timeout = 0
 			if ("vote_autogamemode_timeleft")
 				vote_autogamemode_timeleft = text2num(value)
 			if ("pre_game_time")
@@ -888,9 +900,20 @@
 				enable_cold_mist = TRUE
 			if ("disable_runechat")
 				runechat_enabled = FALSE
-			// [SIERRA-ADD]
 			if ("shutdown_on_reboot")
 				shutdown_on_reboot = TRUE
+			// [SIERRA-ADD]
+			if ("explosion_z_threshold")
+				iterative_explosives_z_threshold = text2num(value)
+
+			if ("explosion_z_mult")
+				iterative_explosives_z_multiplier = text2num(value)
+
+			if ("explosion_z_sub")
+				iterative_explosives_z_subtraction = text2num(value)
+
+			if ("use_spreading_explosions")
+				use_spreading_explosions = TRUE
 			// [/SIERRA-ADD]
 			// [SIERRA-ADD] - EX666_ECOSYSTEM
 			if ("overflow_server_url")

@@ -46,6 +46,14 @@
 
 /obj/screen/movable/proc/encode_screen_X(X, mob/viewer)
 	var/view = viewer.client ? viewer.client.view : world.view
+	// [SIERRA-ADD]
+	if(view == "19x15")
+		view = 9
+	else if(view == "17x15")
+		view = 8
+	else if(view == "15x15")
+		view = 7
+	// [/SIERRA-ADD]
 	if(X > view+1)
 		. = "EAST-[view*2 + 1-X]"
 	else if(X < view+1)
@@ -55,6 +63,14 @@
 
 /obj/screen/movable/proc/decode_screen_X(X, mob/viewer)
 	var/view = viewer.client ? viewer.client.view : world.view
+	// [SIERRA-ADD]
+	if(view == "19x15")
+		view = 9
+	else if(view == "17x15")
+		view = 8
+	else if(view == "15x15")
+		view = 7
+	// [/SIERRA-ADD]
 	//Find EAST/WEST implementations
 	if(findtext(X,"EAST-"))
 		var/num = text2num(copytext(X,6)) //Trim EAST-
@@ -71,15 +87,24 @@
 
 /obj/screen/movable/proc/encode_screen_Y(Y, mob/viewer)
 	var/view = viewer.client ? viewer.client.view : world.view
+	// [SIERRA-ADD]
+	if(view == "19x15" || view == "17x15" || view == "15x15")
+		view = 7
+	// [/SIERRA-ADD]
 	if(Y > view+1)
+
 		. = "NORTH-[view*2 + 1-Y]"
-	else if(Y < viewer.client.view+1)
+	else if(Y < view+1)
 		. = "SOUTH+[Y-1]"
 	else
 		. = "CENTER"
 
 /obj/screen/movable/proc/decode_screen_Y(Y, mob/viewer)
 	var/view = viewer.client ? get_view_size_y(viewer.client.view) : world.view
+	// [SIERRA-ADD]
+	if(view == "19x15" || view == "17x15" || view == "15x15")
+		view = 7
+	// [/SIERRA-ADD]
 	if(findtext(Y,"NORTH-"))
 		var/num = text2num(copytext(Y,7)) //Trim NORTH-
 		if(!num)

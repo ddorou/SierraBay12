@@ -13,6 +13,13 @@
 #define LANGUAGE_SIIK_TAJR		"Siik'tajr"
 // TAJARA - End
 
+// ASCENT - Start
+#define SPECIES_MANTID_ALATE	"Kharmaan Alate"
+#define SPECIES_MANTID_GYNE		"Kharmaan Gyne"
+#define SPECIES_MONARCH_WORKER	"Monarch Serpentid Worker"
+#define SPECIES_MONARCH_QUEEN	"Monarch Serpentid Queen"
+// ASCENT - End
+
 // LEGALESE - Start
 #define LANGUAGE_LEGALESE		"Legalese"
 // LEGALESE - End
@@ -24,7 +31,7 @@
 
 // DON_LOADOUT - Start
 // Не открывать до Рождества
-/*
+
 #define DONATION_TIER_NONE   null
 #define DONATION_TIER_ONE    "Tier 1"
 #define DONATION_TIER_TWO    "Tier 2"
@@ -43,8 +50,17 @@
 	DONATION_TIER_NONE, DONATION_TIER_ONE, \
 	DONATION_TIER_TWO, DONATION_TIER_THREE, \
 	DONATION_TIER_FOUR, DONATION_TIER_ADMIN)
-*/
+
 // DON_LOADOUT - End
+
+// GUNS - Start
+#define GUN_BULK_PISTOL       1
+#define GUN_BULK_REVOLVER     2
+#define GUN_BULK_SMG          3
+#define GUN_BULK_CARABINE     4
+#define GUN_BULK_SNIPER_RIFLE 6
+#define GUN_BULK_MACHINEGUN   7
+// GUNS - End
 
 // GLIDING - Start
 #define DELAY2GLIDESIZE(delay) (world.icon_size / max(ceil(delay / world.tick_lag), 1))
@@ -56,6 +72,7 @@
 
 // IPC_COOLING_UNIT - Start
 #define BP_COOLING "cooling system"
+#define BP_EXONET "exonet connection slot"
 // IPC_COOLING_UNIT - End
 
 // RESOMI - Start

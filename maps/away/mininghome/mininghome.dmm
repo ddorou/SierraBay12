@@ -4040,7 +4040,6 @@
 /obj/floor_decal/corner/brown{
 	dir = 8
 	},
-/obj/item/device/kit/paint/flames_blue,
 /turf/simulated/floor/steel_dirty,
 /area/map_template/mininghome_hall)
 "KV" = (

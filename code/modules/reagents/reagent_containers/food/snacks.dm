@@ -1,3 +1,20 @@
+// Хрюкерс адд (SIERRA_ADD)
+/obj/item/reagent_containers/food/snacks/monkeycube/lizard
+	name = "lizard cube"
+	monkey_type = /mob/living/simple_animal/passive/lizard
+
+/obj/item/reagent_containers/food/snacks/monkeycube/mouse
+	name = "mouse cube"
+	monkey_type = /mob/living/simple_animal/passive/mouse
+
+/obj/item/reagent_containers/food/snacks/monkeycube/corgi
+	name = "corgi cube"
+	monkey_type = /mob/living/simple_animal/passive/corgi
+
+/obj/item/reagent_containers/food/snacks/monkeycube/cat
+	name = "cat cube"
+	monkey_type = /mob/living/simple_animal/passive/cat // Хрюкерс адд енд (SIERRA ADD-END)
+
 /obj/item/reagent_containers/food/snacks
 	name = "snack"
 	desc = "Yummy!"
@@ -3150,7 +3167,7 @@
 
 	else if(istype(W, /obj/item/reagent_containers/food/snacks))
 		var/obj/item/reagent_containers/food/snacks/F = W
-		var /obj/item/reagent_containers/food/snacks/customburger/C = new(src)
+		var/obj/item/reagent_containers/food/snacks/customburger/C = new(src)
 		C.SetName("[F.name]-burger")
 		C.filling_color = F.filling_color
 		var/image/I = image(C.icon, "customburger_filling")
@@ -4211,7 +4228,7 @@
 	bitesize = 2
 /obj/item/reagent_containers/food/snacks/venus/Initialize()
 	.=..()
-	reagents.add_reagent(/datum/reagent/capsaicin = 5)
+	reagents.add_reagent(/datum/reagent/capsaicin, 5)
 
 /obj/item/reagent_containers/food/snacks/oort
 	name = "oort cloud rocks"
@@ -4225,7 +4242,7 @@
 	bitesize = 2
 /obj/item/reagent_containers/food/snacks/oort/Initialize()
 	.=..()
-	reagents.add_reagent(/datum/reagent/frostoil = 5)
+	reagents.add_reagent(/datum/reagent/frostoil, 5)
 
 //weebo vend! So japanese it hurts
 
@@ -4255,7 +4272,7 @@
 	bitesize = 2
 /obj/item/reagent_containers/food/snacks/weebonuts/Initialize()
 	.=..()
-	reagents.add_reagent(/datum/reagent/capsaicin = 1)
+	reagents.add_reagent(/datum/reagent/capsaicin, 1)
 	reagents.add_reagent(/datum/reagent/nutriment/groundpeanuts, 4)
 
 /obj/item/reagent_containers/food/snacks/chocobanana
