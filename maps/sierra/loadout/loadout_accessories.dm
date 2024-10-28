@@ -125,3 +125,9 @@
 	allowed_branches = list(/datum/mil_branch/contractor)
 	allowed_factions = list(FACTION_EXPEDITIONARY, FACTION_CORPORATE)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
+
+/datum/gear/accessory/armband_corpsman
+	display_name = "medical armband"
+	path = /obj/item/clothing/accessory/armband/medblue
+	allowed_roles = list(/datum/job/cmo, /datum/job/senior_doctor, /datum/job/doctor, /datum/job/doctor_trainee, /datum/job/explorer_medic, /datum/job/psychiatrist, /datum/job/chemist)
+	flags = GEAR_HAS_NO_CUSTOMIZATION
