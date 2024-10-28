@@ -97,7 +97,7 @@
 /datum/gear/accessory/solgov/exploration
 	display_name = "Solgov exploration insignia"
 	path = /obj/item/clothing/accessory/solgov/department/exploration
-	allowed_roles = list(/datum/job/explorer, /datum/job/explorer_medic, /datum/job/explorer_engineer, /datum/job/explorer_pilot)
+	allowed_roles = list(/datum/job/explorer, /datum/job/explorer_medic, /datum/job/explorer_engineer, /datum/job/explorer_pilot, /datum/job/exploration_leader)
 	allowed_branches = list(/datum/mil_branch/contractor)
 	allowed_factions = list(FACTION_EXPEDITIONARY, FACTION_CORPORATE)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
