@@ -7,6 +7,7 @@
 - https://github.com/SierraBay/SierraBay12/pull/1761
 - https://github.com/SierraBay/SierraBay12/pull/1856
 - https://github.com/SierraBay/SierraBay12/pull/2230
+- https://github.com/SierraBay/SierraBay12/pull/2262
 <!--
   Ссылки на PRы, связанные с модом:
   - Создание
@@ -84,7 +85,9 @@ ID мода: LOADOUT_ITEMS
 
 ### Авторы:
 
-UEDHighCommand
+- UEDHighCommand
+- BrunoSamoyed (новый спрайт плаща)
+- Часть предметов портирована с билда Aurora
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

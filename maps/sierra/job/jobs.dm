@@ -1,28 +1,29 @@
+#define VAGABONDS_JOBS /datum/job/vagabond
 /datum/map/sierra
 	species_to_job_whitelist = list(
 		/datum/species/adherent = list(ADHERENT_JOBS),
 		/datum/species/nabber = list(NABBER_JOBS),
-		/datum/species/vox = list(SILICON_JOBS),
-		/datum/species/human/mule = list(SILICON_JOBS)
+		/datum/species/vox = list(SILICON_JOBS, VAGABONDS_JOBS),
+		/datum/species/human/mule = list(SILICON_JOBS, VAGABONDS_JOBS)
 	)
 
 	species_to_job_blacklist = list(
-		/datum/species/unathi = list(HUMAN_ONLY_JOBS),
-		/datum/species/unathi/yeosa = list(HUMAN_ONLY_JOBS),
-		/datum/species/tajaran = list(HUMAN_ONLY_JOBS),
-		/datum/species/skrell = list(SKRELL_BLACKLISTED_JOBS),
-		/datum/species/machine = list(MACHINE_BLACKLISTED_JOBS),
+		/datum/species/unathi = list(HUMAN_ONLY_JOBS, VAGABONDS_JOBS),
+		/datum/species/unathi/yeosa = list(HUMAN_ONLY_JOBS, VAGABONDS_JOBS),
+		/datum/species/tajaran = list(HUMAN_ONLY_JOBS, VAGABONDS_JOBS),
+		/datum/species/skrell = list(SKRELL_BLACKLISTED_JOBS, VAGABONDS_JOBS),
+		/datum/species/machine = list(MACHINE_BLACKLISTED_JOBS, VAGABONDS_JOBS),
 		/datum/species/diona = list(
 			HUMAN_ONLY_JOBS, /datum/job/exploration_leader, /datum/job/explorer_pilot,
 			/datum/job/officer, /datum/job/warden, /datum/job/detective,
 			/datum/job/qm,
 			/datum/job/senior_engineer, /datum/job/senior_doctor,
-			/datum/job/senior_scientist, /datum/job/security_assistant
+			/datum/job/senior_scientist, /datum/job/security_assistant, VAGABONDS_JOBS
 		),
 		/datum/species/resomi = list(
 	 		HUMAN_ONLY_JOBS, /datum/job/officer, /datum/job/exploration_leader,
 	 		/datum/job/warden, /datum/job/chief_engineer, /datum/job/rd,
-	 		/datum/job/iaa, /datum/job/security_assistant
+	 		/datum/job/iaa, /datum/job/security_assistant, VAGABONDS_JOBS
  		)
 	)
 
@@ -37,7 +38,7 @@
 		/datum/job/chief_steward, /datum/job/janitor, /datum/job/cook, /datum/job/bartender, /datum/job/steward, /datum/job/chaplain, /datum/job/actor,
 		/datum/job/senior_scientist, /datum/job/scientist, /datum/job/roboticist, /datum/job/scientist_assistant,
 		/datum/job/ai, /datum/job/cyborg,
-		/datum/job/assistant
+		/datum/job/assistant, /datum/job/vagabond
 	)
 
 	access_modify_region = list(
@@ -108,6 +109,40 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+//[SIERRA-ADD] - [IPC-MODS]
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ IPC JOBS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+/singleton/cultural_info/culture/ipc
+	valid_jobs = list(/datum/job/engineer_trainee, /datum/job/doctor_trainee, /datum/job/cargo_tech, /datum/job/cargo_assistant, /datum/job/mining,
+	/datum/job/janitor, /datum/job/cook, /datum/job/scientist_assistant, /datum/job/assistant, /datum/job/steward, /datum/job/ai, /datum/job/cyborg)
+
+/singleton/cultural_info/culture/ipc/gen2
+	valid_jobs = list(/datum/job/adjutant,
+		/datum/job/exploration_leader, /datum/job/explorer, /datum/job/explorer_pilot, /datum/job/explorer_medic, /datum/job/explorer_engineer,
+		/datum/job/senior_engineer, /datum/job/engineer, /datum/job/infsys, /datum/job/engineer_trainee,
+		/datum/job/senior_doctor, /datum/job/doctor, /datum/job/doctor_trainee, /datum/job/chemist, /datum/job/chaplain,
+		/datum/job/qm, /datum/job/cargo_tech,  /datum/job/cargo_assistant, /datum/job/mining,
+		/datum/job/janitor, /datum/job/cook, /datum/job/bartender, /datum/job/steward, /datum/job/chief_steward,
+		/datum/job/senior_scientist, /datum/job/scientist, /datum/job/roboticist, /datum/job/scientist_assistant,
+		/datum/job/ai, /datum/job/cyborg, /datum/job/assistant,
+		/datum/job/submap/bearcat_captain, /datum/job/submap/bearcat_crewman,
+		/datum/job/submap/scavver_pilot, /datum/job/submap/scavver_doctor, /datum/job/submap/scavver_engineer
+		)
+
+/singleton/cultural_info/culture/ipc/gen3
+	valid_jobs = list(/datum/job/hop, /datum/job/rd, /datum/job/cmo, /datum/job/chief_engineer,
+		/datum/job/iaa, /datum/job/adjutant,
+		/datum/job/exploration_leader, /datum/job/explorer, /datum/job/explorer_pilot, /datum/job/explorer_medic, /datum/job/explorer_engineer,
+		/datum/job/senior_engineer, /datum/job/engineer, /datum/job/infsys, /datum/job/engineer_trainee,
+		/datum/job/warden, /datum/job/detective, /datum/job/officer,
+		/datum/job/senior_doctor, /datum/job/doctor, /datum/job/doctor_trainee, /datum/job/chemist,
+		/datum/job/qm, /datum/job/cargo_tech,  /datum/job/cargo_assistant, /datum/job/mining,
+		/datum/job/janitor, /datum/job/cook, /datum/job/bartender, /datum/job/steward, /datum/job/chief_steward,
+		/datum/job/senior_scientist, /datum/job/scientist, /datum/job/roboticist, /datum/job/scientist_assistant,
+		/datum/job/ai, /datum/job/cyborg, /datum/job/assistant
+)
+//[/SIERRA-ADD] - [IPC-MODS]
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /datum/job
 	allowed_branches = list(
 		/datum/mil_branch/civilian
@@ -116,6 +151,8 @@
 		/datum/mil_rank/civ/civ
 	)
 	required_language = LANGUAGE_HUMAN_EURO
+	psi_latency_chance = 8
+	give_psionic_implant_on_join = FALSE
 
 /datum/map/sierra
 	default_assistant_title = "Crewman"
@@ -126,3 +163,4 @@
 #undef NABBER_JOBS
 #undef SKRELL_BLACKLISTED_JOBS
 #undef MACHINE_BLACKLISTED_JOBS
+#undef VAGABONDS_JOBS
