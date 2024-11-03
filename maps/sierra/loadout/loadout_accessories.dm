@@ -78,13 +78,14 @@
 	path = /obj/item/clothing/accessory/badge/holo/investigator
 	allowed_roles = list(/datum/job/iaa)
 
-/datum/gear/accessory/solgov/command
+/datum/gear/accessory/solgov
 	display_name = "Solgov command insignia"
 	path = /obj/item/clothing/accessory/solgov/department/command
 	allowed_roles = list(/datum/job/captain, /datum/job/hop, /datum/job/rd, /datum/job/cmo, /datum/job/chief_engineer, /datum/job/hos, /datum/job/iaa, /datum/job/adjutant)
 	allowed_branches = list(/datum/mil_branch/contractor)
 	allowed_factions = list(FACTION_EXPEDITIONARY, FACTION_CORPORATE)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
+	cost = 0
 
 /datum/gear/accessory/solgov/engineering
 	display_name = "Solgov engineering insignia"
@@ -93,6 +94,7 @@
 	allowed_branches = list(/datum/mil_branch/contractor)
 	allowed_factions = list(FACTION_EXPEDITIONARY, FACTION_CORPORATE)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
+	cost = 0
 
 /datum/gear/accessory/solgov/exploration
 	display_name = "Solgov exploration insignia"
@@ -101,6 +103,7 @@
 	allowed_branches = list(/datum/mil_branch/contractor)
 	allowed_factions = list(FACTION_EXPEDITIONARY, FACTION_CORPORATE)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
+	cost = 0
 
 /datum/gear/accessory/solgov/medical
 	display_name = "Solgov medical insignia"
@@ -109,6 +112,7 @@
 	allowed_branches = list(/datum/mil_branch/contractor)
 	allowed_factions = list(FACTION_EXPEDITIONARY, FACTION_CORPORATE)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
+	cost = 0
 
 /datum/gear/accessory/solgov/security
 	display_name = "Solgov security insignia"
@@ -117,6 +121,7 @@
 	allowed_branches = list(/datum/mil_branch/contractor)
 	allowed_factions = list(FACTION_EXPEDITIONARY, FACTION_CORPORATE)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
+	cost = 0
 
 /datum/gear/accessory/solgov/supply
 	display_name = "Solgov supply insignia"
@@ -125,9 +130,11 @@
 	allowed_branches = list(/datum/mil_branch/contractor)
 	allowed_factions = list(FACTION_EXPEDITIONARY, FACTION_CORPORATE)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
+	cost = 0
 
 /datum/gear/accessory/armband_corpsman
 	display_name = "medical armband"
 	path = /obj/item/clothing/accessory/armband/medblue
 	allowed_roles = list(/datum/job/cmo, /datum/job/senior_doctor, /datum/job/doctor, /datum/job/doctor_trainee, /datum/job/explorer_medic, /datum/job/psychiatrist, /datum/job/chemist)
 	flags = GEAR_HAS_NO_CUSTOMIZATION
+	cost = 0
